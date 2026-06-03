@@ -1,0 +1,23 @@
+# Arquivos locais ocultos
+.*
+!.gitignore
+
+# Ambientes Python
+.venv/
+venv/
+env/
+
+# Dataset completo do EuroSAT_RGB (27k imagens, ~144 MB).
+# Nao versionamos o dataset inteiro: baixe conforme instrucoes no README.
+# Uma amostra pequena e versionada via "git add -f" para a demo rodar.
+EuroSAT_RGB/
+
+# Cache Python/Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Cache de ferramentas locais
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
