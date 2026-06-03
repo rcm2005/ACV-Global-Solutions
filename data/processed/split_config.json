@@ -1,0 +1,88 @@
+{
+  "dataset_root": "EuroSAT_RGB",
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "generated_at_utc": "2026-06-01T16:22:42Z",
+  "num_classes": 10,
+  "total_images": 27000,
+  "class_counts": {
+    "AnnualCrop": 3000,
+    "Forest": 3000,
+    "HerbaceousVegetation": 3000,
+    "Highway": 2500,
+    "Industrial": 2500,
+    "Pasture": 2000,
+    "PermanentCrop": 2500,
+    "Residential": 3000,
+    "River": 2500,
+    "SeaLake": 3000
+  },
+  "split_counts": {
+    "train": 18900,
+    "val": 4050,
+    "test": 4050
+  },
+  "split_class_counts": {
+    "train": {
+      "AnnualCrop": 2100,
+      "Forest": 2100,
+      "HerbaceousVegetation": 2100,
+      "Highway": 1750,
+      "Industrial": 1750,
+      "Pasture": 1400,
+      "PermanentCrop": 1750,
+      "Residential": 2100,
+      "River": 1750,
+      "SeaLake": 2100
+    },
+    "val": {
+      "AnnualCrop": 450,
+      "Forest": 450,
+      "HerbaceousVegetation": 450,
+      "Highway": 375,
+      "Industrial": 375,
+      "Pasture": 300,
+      "PermanentCrop": 375,
+      "Residential": 450,
+      "River": 375,
+      "SeaLake": 450
+    },
+    "test": {
+      "AnnualCrop": 450,
+      "Forest": 450,
+      "HerbaceousVegetation": 450,
+      "Highway": 375,
+      "Industrial": 375,
+      "Pasture": 300,
+      "PermanentCrop": 375,
+      "Residential": 450,
+      "River": 375,
+      "SeaLake": 450
+    }
+  },
+  "image_modes": [
+    "RGB"
+  ],
+  "image_sizes": [
+    [
+      64,
+      64
+    ]
+  ],
+  "input_size": [
+    64,
+    64
+  ],
+  "manifest_file": "dataset_manifest.csv",
+  "split_files": {
+    "train": "train.csv",
+    "val": "val.csv",
+    "test": "test.csv"
+  },
+  "normalization_file": "train_stats.json",
+  "image_copy_strategy": "no_image_copy_metadata_only"
+}
