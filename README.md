@@ -6,6 +6,8 @@ Solução de Visão Computacional com PyTorch para a Global Solution FIAP 2026, 
 
 | Campo | Informação |
 |---|---|
+| Nome da solução | Orbital Land Classifier |
+| Nome descritivo | Plataforma Cloud de Classificação de Uso do Solo via Sensoriamento Remoto Orbital |
 | Disciplina | Applied Computer Vision |
 | Tema | Global Solution 2026 — Indústria Espacial |
 | Turma | 2026/1 — manhã |
