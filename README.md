@@ -11,10 +11,9 @@ Solução de Visão Computacional com PyTorch para a Global Solution FIAP 2026, 
 | Disciplina | Applied Computer Vision |
 | Tema | Global Solution 2026 — Indústria Espacial |
 | Turma | 2026/1 — manhã |
-| Integrante(s) | Rafael Carvalho Mattos — RM99874 _(demais integrantes a preencher antes da entrega)_ |
+| Integrantes | Rafael Carvalho Mattos — RM99874<br>Luiza Cristina Silva — RM99367<br>Rafael Autieri dos Anjos — RM550885<br>Levy Nascimento Junior — RM98655 |
 | Professor(a) | Preencher, se aplicável |
 | Vídeo | Preencher link do YouTube antes da entrega |
-
 ## Contexto da Global Solution
 
 A Global Solution 2026 tem como tema a Indústria Espacial. Dentro da disciplina Applied Computer Vision, este projeto constrói uma solução de classificação de imagens capaz de reconhecer categorias de uso e cobertura do solo em recortes RGB de sensoriamento remoto.
