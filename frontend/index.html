@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Land Classifier — Global Solution 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVEGACAO
+       ============================================================ -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <span class="nav-logo">Orbital Land Classifier</span>
+      <ul class="nav-links">
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#orbital">Dados Orbitais</a></li>
+        <li><a href="#arquitetura">Arquitetura</a></li>
+        <li><a href="#modelo">Modelo de IA</a></li>
+        <li><a href="#ods">ODS</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">Global Solution 2026 &mdash; FIAP &mdash; Industria Espacial</div>
+      <h1 class="hero-title">Orbital Land Classifier</h1>
+      <p class="hero-subtitle">
+        Plataforma cloud de classificacao automatica de uso e cobertura do solo
+        a partir de imagens RGB do satelite Sentinel-2, hospedada integralmente na AWS.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">91,53%</span>
+          <span class="stat-label">Acuracia no teste</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">27.000</span>
+          <span class="stat-label">Imagens Sentinel-2</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">10</span>
+          <span class="stat-label">Classes de solo</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">AWS</span>
+          <span class="stat-label">Infraestrutura</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       PROBLEMA
+       ============================================================ -->
+  <section id="problema" class="section">
+    <div class="container">
+      <div class="section-label">01 &mdash; Problema</div>
+      <h2 class="section-title">Monitoramento ambiental em escala e velocidade</h2>
+      <p class="section-desc">
+        O monitoramento manual de areas agricolas, florestais e urbanas e lento, caro e impossivel de escalar.
+        Regioes remotas ficam sem cobertura. Mudancas ambientais sao identificadas tarde demais para intervencao eficaz.
+      </p>
+      <div class="grid grid-4">
+        <div class="card">
+          <div class="card-num">01</div>
+          <h3>Alto custo operacional</h3>
+          <p>
+            Especialistas de campo e levantamentos aereos exigem recursos elevados e nao podem
+            ser acionados de forma continua sobre grandes areas.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-num">02</div>
+          <h3>Escala impossivel</h3>
+          <p>
+            Uma equipe humana nao consegue monitorar simultaneamente florestas, areas agricolas
+            e zonas urbanas em escala regional ou nacional.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-num">03</div>
+          <h3>Regioes remotas sem cobertura</h3>
+          <p>
+            Areas de dificil acesso ficam fora do monitoramento regular, tornando imperceptiveis
+            degradacoes ambientais e mudancas de uso do solo.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-num">04</div>
+          <h3>Deteccao tardia</h3>
+          <p>
+            Sem analise automatizada, impactos climaticos e ambientais sao identificados
+            ja em estagio avancado, quando a intervencao e mais dificil e custosa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONEXAO ORBITAL
+       ============================================================ -->
+  <section id="orbital" class="section section-dark">
+    <div class="container">
+      <div class="section-label">02 &mdash; Dados Orbitais</div>
+      <h2 class="section-title">Dados reais do satelite Sentinel-2</h2>
+      <div class="two-col">
+        <div>
+          <p>
+            O dataset EuroSAT, base de treinamento deste projeto, e composto integralmente
+            por imagens RGB extraidas de cenas capturadas pelo satelite <strong>Sentinel-2</strong>,
+            operado pela <strong>Agencia Espacial Europeia (ESA)</strong> dentro do programa
+            <strong>Copernicus</strong>.
+          </p>
+          <p>
+            Cada imagem representa um recorte real da superficie terrestre capturado em orbita
+            a aproximadamente 786 km de altitude. O modelo classificador foi treinado sobre
+            dados genuinamente orbitais, nao simulacoes ou imagens aereas convencionais.
+          </p>
+          <p>
+            A plataforma Orbital Land Classifier simula o funcionamento de sistemas comerciais
+            de analise de imagens satelitais, como os utilizados por Planet Labs, Descartes Labs
+            e o portal Copernicus da propria ESA: dados orbitais sao submetidos a modelos de
+            inteligencia artificial em infraestrutura cloud e o resultado e disponibilizado
+            via interface web.
+          </p>
+        </div>
+        <div class="specs-box">
+          <h3>Especificacoes — Sentinel-2</h3>
+          <table class="specs-table">
+            <tr><td>Operador</td>         <td>ESA / Copernicus</td></tr>
+            <tr><td>Altitude orbital</td> <td>786 km</td></tr>
+            <tr><td>Resolucao RGB</td>    <td>10 m/pixel</td></tr>
+            <tr><td>Revisita</td>         <td>5 dias (par 2A / 2B)</td></tr>
+            <tr><td>Imagens no dataset</td><td>27.000 recortes</td></tr>
+            <tr><td>Dimensao do recorte</td><td>64 x 64 pixels</td></tr>
+            <tr><td>Classes identificadas</td><td>10 categorias de solo</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ARQUITETURA AWS
+       ============================================================ -->
+  <section id="arquitetura" class="section">
+    <div class="container">
+      <div class="section-label">03 &mdash; Arquitetura</div>
+      <h2 class="section-title">Infraestrutura cloud na AWS</h2>
+      <p class="section-desc">
+        A aplicacao e hospedada na AWS com pipeline CI/CD totalmente automatizado via GitHub Actions,
+        seguranca baseada em principio de menor privilegio e monitoramento ativo via CloudWatch e Budgets.
+      </p>
+
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <div class="pipeline-icon">GIT</div>
+          <div class="pipeline-label">GitHub<br><small>Repositorio</small></div>
+        </div>
+        <div class="pipeline-arrow">&rarr;</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">CI</div>
+          <div class="pipeline-label">GitHub Actions<br><small>OIDC — sem access key</small></div>
+        </div>
+        <div class="pipeline-arrow">&rarr;</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">IAM</div>
+          <div class="pipeline-label">IAM Role<br><small>Permissoes minimas</small></div>
+        </div>
+        <div class="pipeline-arrow">&rarr;</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">SSM</div>
+          <div class="pipeline-label">Parameter Store<br><small>Criptografado com KMS</small></div>
+        </div>
+        <div class="pipeline-arrow">&rarr;</div>
+        <div class="pipeline-step pipeline-step-accent">
+          <div class="pipeline-icon">S3</div>
+          <div class="pipeline-label">AWS S3<br><small>Website publico</small></div>
+        </div>
+        <div class="pipeline-arrow">&rarr;</div>
+        <div class="pipeline-step">
+          <div class="pipeline-icon">URL</div>
+          <div class="pipeline-label">Usuarios<br><small>URL publica</small></div>
+        </div>
+      </div>
+
+      <table class="services-table">
+        <thead>
+          <tr>
+            <th>Servico AWS</th>
+            <th>Funcao na solucao</th>
+            <th>Criterio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>S3 Static Website</code></td>
+            <td>Hospeda a aplicacao web com URL publica acessivel</td>
+            <td>Infraestrutura</td>
+          </tr>
+          <tr>
+            <td><code>IAM Role + OIDC</code></td>
+            <td>Autenticacao federada do GitHub Actions sem credenciais estaticas armazenadas</td>
+            <td>Seguranca</td>
+          </tr>
+          <tr>
+            <td><code>KMS &mdash; CMK</code></td>
+            <td>Chave gerenciada usada para criptografar parametros no Parameter Store</td>
+            <td>Seguranca</td>
+          </tr>
+          <tr>
+            <td><code>SSM Parameter Store</code></td>
+            <td>Armazena configuracoes da infraestrutura como SecureString criptografado</td>
+            <td>Seguranca</td>
+          </tr>
+          <tr>
+            <td><code>CloudWatch Metrics</code></td>
+            <td>Monitora requisicoes, erros 4xx e disponibilidade da aplicacao</td>
+            <td>Monitoramento</td>
+          </tr>
+          <tr>
+            <td><code>AWS Budgets</code></td>
+            <td>Alerta de custo mensal com notificacao automatica por e-mail</td>
+            <td>Monitoramento</td>
+          </tr>
+          <tr>
+            <td><code>GitHub Actions</code></td>
+            <td>Pipeline CI/CD acionado automaticamente por push na branch main</td>
+            <td>CI/CD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MODELO DE IA
+       ============================================================ -->
+  <section id="modelo" class="section section-dark">
+    <div class="container">
+      <div class="section-label">04 &mdash; Modelo de IA</div>
+      <h2 class="section-title">Redes Neurais Convolucionais treinadas do zero</h2>
+      <p class="section-desc">
+        Dois modelos CNN foram implementados e treinados do zero em PyTorch, sem uso de modelos
+        pre-treinados ou transfer learning. O modelo ImprovedCNN superou a meta de 88% de acuracia
+        no conjunto de teste.
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card card-baseline">
+          <h3>BaselineCNN</h3>
+          <div class="model-stat">82,42%</div>
+          <div class="model-stat-label">acuracia no teste</div>
+          <ul class="model-details">
+            <li>3 blocos Conv2d + ReLU + MaxPool2d</li>
+            <li>AdaptiveAvgPool2d (4&times;4)</li>
+            <li>Dropout no classificador (p = 0,25)</li>
+            <li>620.362 parametros treinaveis</li>
+            <li>8 epocas &mdash; loss no teste: 0,5041</li>
+          </ul>
+          <span class="model-badge model-badge-miss">Meta 88% nao atingida</span>
+        </div>
+        <div class="card card-improved">
+          <h3>ImprovedCNN</h3>
+          <div class="model-stat model-stat-accent">91,53%</div>
+          <div class="model-stat-label">acuracia no teste</div>
+          <ul class="model-details">
+            <li>4 estagios com 2 convolucoes cada</li>
+            <li>BatchNorm2d + Dropout2d por estagio</li>
+            <li>AdaptiveAvgPool2d (1&times;1)</li>
+            <li>1.207.402 parametros treinaveis</li>
+            <li>12 epocas &mdash; loss no teste: 0,2400</li>
+          </ul>
+          <span class="model-badge model-badge-hit">Meta 88% atingida</span>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Classes identificadas</h3>
+      <div class="classes-grid">
+        <div class="class-tag">AnnualCrop</div>
+        <div class="class-tag">Forest</div>
+        <div class="class-tag">HerbaceousVegetation</div>
+        <div class="class-tag">Highway</div>
+        <div class="class-tag">Industrial</div>
+        <div class="class-tag">Pasture</div>
+        <div class="class-tag">PermanentCrop</div>
+        <div class="class-tag">Residential</div>
+        <div class="class-tag">River</div>
+        <div class="class-tag">SeaLake</div>
+      </div>
+
+      <h3 class="subsection-title">Resultados visuais</h3>
+      <div class="grid grid-2">
+        <figure class="figure">
+          <img src="assets/confusion_matrix.png"
+               alt="Matriz de confusao do modelo ImprovedCNN no conjunto de teste"
+               class="result-img">
+          <figcaption>Matriz de confusao &mdash; ImprovedCNN no conjunto de teste (4.050 imagens)</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="assets/accuracy_loss.png"
+               alt="Curvas de acuracia e loss por epoca &mdash; ImprovedCNN"
+               class="result-img">
+          <figcaption>Curvas de acuracia e loss por epoca &mdash; ImprovedCNN (12 epocas)</figcaption>
+        </figure>
+      </div>
+      <div class="figure-full">
+        <figure class="figure">
+          <img src="assets/correct_predictions.png"
+               alt="Exemplos de predicoes corretas do modelo ImprovedCNN"
+               class="result-img">
+          <figcaption>Exemplos de acertos do ImprovedCNN no conjunto de teste &mdash; confiancas acima de 95%</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ODS
+       ============================================================ -->
+  <section id="ods" class="section">
+    <div class="container">
+      <div class="section-label">05 &mdash; ODS</div>
+      <h2 class="section-title">Objetivos de Desenvolvimento Sustentavel</h2>
+      <p class="section-desc">
+        A solucao contribui diretamente para tres ODS da ONU atraves do monitoramento automatizado
+        de uso e cobertura do solo via imagens orbitais Sentinel-2.
+      </p>
+      <div class="grid grid-3">
+        <div class="card ods-card">
+          <div class="ods-number">ODS 2 &mdash; Fome Zero</div>
+          <h3>Agricultura Sustentavel</h3>
+          <p>
+            A classificacao automatica de areas de cultivo anual, cultivo permanente e pastagem
+            apoia o monitoramento da producao agricola e a gestao territorial rural.
+            Agricultores e orgaos publicos identificam rapidamente alteracoes em areas de plantio
+            sem necessidade de levantamentos presenciais.
+          </p>
+        </div>
+        <div class="card ods-card">
+          <div class="ods-number">ODS 13 &mdash; Acao Climatica</div>
+          <h3>Mudanca Global do Clima</h3>
+          <p>
+            O acompanhamento continuo de florestas, vegetacao herbácea e corpos d'agua via
+            imagens Sentinel-2 contribui para analises de mudancas de cobertura do solo.
+            A identificacao precoce de degradacao ambiental permite intervencao antes que
+            os impactos se tornem irreversiveis.
+          </p>
+        </div>
+        <div class="card ods-card">
+          <div class="ods-number">ODS 15 &mdash; Vida Terrestre</div>
+          <h3>Preservacao de Ecossistemas</h3>
+          <p>
+            A identificacao automatizada de florestas, vegetacao natural, rios e areas de pastagem
+            auxilia programas de preservacao ambiental e o monitoramento de ecossistemas em escala
+            regional, sem depender de equipes de campo ou levantamentos aereos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EQUIPE
+       ============================================================ -->
+  <section id="equipe" class="section section-dark">
+    <div class="container">
+      <div class="section-label">06 &mdash; Equipe</div>
+      <h2 class="section-title">Identificacao do projeto</h2>
+      <div class="team-grid">
+        <div>
+          <table class="info-table">
+            <tr><td>Instituicao</td>    <td>FIAP</td></tr>
+            <tr><td>Disciplina</td>     <td>Cloud Computing &mdash; Global Solution 2026</td></tr>
+            <tr><td>Turma</td>          <td>2026/1 &mdash; manha</td></tr>
+            <tr><td>Tema</td>           <td>Industria Espacial</td></tr>
+            <tr><td>Integrante</td>     <td>Rafael Carvalho Mattos &mdash; RM99874</td></tr>
+            <tr>
+              <td>Repositorio</td>
+              <td>
+                <a href="https://github.com/rcm2005/ACV-Global-Solutions" target="_blank" rel="noopener">
+                  github.com/rcm2005/ACV-Global-Solutions
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="tech-tags">
+          <h3>Tecnologias utilizadas</h3>
+          <div class="tags">
+            <span class="tag">AWS S3</span>
+            <span class="tag">AWS KMS</span>
+            <span class="tag">AWS IAM</span>
+            <span class="tag">SSM Parameter Store</span>
+            <span class="tag">CloudWatch</span>
+            <span class="tag">AWS Budgets</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">OIDC Federation</span>
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Sentinel-2 / ESA</span>
+            <span class="tag">EuroSAT</span>
+            <span class="tag">HTML / CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Orbital Land Classifier &mdash; Global Solution 2026 &mdash; FIAP</span>
+      <a href="https://github.com/rcm2005/ACV-Global-Solutions" target="_blank" rel="noopener">
+        GitHub
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
