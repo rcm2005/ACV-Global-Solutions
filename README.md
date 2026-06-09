@@ -12,8 +12,8 @@ Solução de Visão Computacional com PyTorch para a Global Solution FIAP 2026, 
 | Tema | Global Solution 2026 — Indústria Espacial |
 | Turma | 2026/1 — manhã |
 | Integrantes | Rafael Carvalho Mattos — RM99874<br>Luiza Cristina Silva — RM99367<br>Rafael Autieri dos Anjos — RM550885<br>Levy Nascimento Junior — RM98655 |
-| Professor(a) | Não informado |
-| Vídeo | A adicionar após a gravação |
+| Professor(a) | Arnaldo Alves Viana Júnior |
+| Vídeo | https://youtu.be/_dw92BLXVN4 |
 
 ## Contexto da Global Solution
 
@@ -432,4 +432,4 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/04_model_evaluatio
 
 ## Vídeo de Demonstração
 
-Link: a adicionar após a gravação.
+Link: https://youtu.be/_dw92BLXVN4
