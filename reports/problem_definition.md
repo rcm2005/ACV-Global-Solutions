@@ -110,15 +110,15 @@ Fluxo previsto:
 - Classes agricolas e de vegetacao podem ser visualmente semelhantes, especialmente `AnnualCrop`, `PermanentCrop`, `Pasture` e `HerbaceousVegetation`.
 - Classes com estruturas lineares ou bordas podem gerar confusao, como `River`, `Highway` e algumas areas urbanas ou agricolas.
 - A classe `Pasture` tem menos imagens que as classes maiores, com 2.000 exemplos contra 3.000 nas maiores classes.
-- A meta de 88% de acuracia em teste e plausivel, mas deve ser validada experimentalmente com split estratificado, matriz de confusao e analise de erros.
+- A meta de 88% de acuracia em teste foi validada experimentalmente com split estratificado, matriz de confusao e analise de erros.
 
-## Decisoes pendentes
+## Decisoes implementadas
 
-- Definir a proporcao final de treino, validacao e teste.
-- Confirmar se o split sera feito por indices estratificados ou por copia fisica para `data/processed/`.
-- Definir os nomes finais das classes em portugues ou manter os nomes originais em ingles para consistencia com `ImageFolder`.
-- Definir as transformacoes de treino e teste, incluindo normalizacao e data augmentation.
-- Definir as duas arquiteturas proprias de CNN treinadas do zero.
+- Proporcao final definida em `70%` treino, `15%` validacao e `15%` teste.
+- Split estratificado registrado em CSV dentro de `data/processed/`, sem copia fisica das imagens.
+- Classes mantidas com os nomes originais em ingles para consistencia com `ImageFolder`.
+- Transforms de treino, validacao, teste e inferencia definidos em `src/transforms.py`, com normalizacao calculada no treino.
+- Duas arquiteturas proprias implementadas e treinadas do zero: `BaselineCNN` e `ImprovedCNN`.
 
 ## Decisao registrada
 

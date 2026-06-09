@@ -12,8 +12,9 @@ Solução de Visão Computacional com PyTorch para a Global Solution FIAP 2026, 
 | Tema | Global Solution 2026 — Indústria Espacial |
 | Turma | 2026/1 — manhã |
 | Integrantes | Rafael Carvalho Mattos — RM99874<br>Luiza Cristina Silva — RM99367<br>Rafael Autieri dos Anjos — RM550885<br>Levy Nascimento Junior — RM98655 |
-| Professor(a) | Preencher, se aplicável |
-| Vídeo | Preencher link do YouTube antes da entrega |
+| Professor(a) | Não informado |
+| Vídeo | A adicionar após a gravação |
+
 ## Contexto da Global Solution
 
 A Global Solution 2026 tem como tema a Indústria Espacial. Dentro da disciplina Applied Computer Vision, este projeto constrói uma solução de classificação de imagens capaz de reconhecer categorias de uso e cobertura do solo em recortes RGB de sensoriamento remoto.
@@ -403,7 +404,6 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/04_model_evaluatio
 - A classe `Pasture` tem menos imagens que as classes maiores (`2.000` contra `3.000`).
 - O treinamento registrado foi feito em `cpu`, com custo maior de tempo.
 - Não há metadados locais de sensor, órbita ou satélite específico no diretório `EuroSAT_RGB`.
-- O README mantém campos de integrantes/RM e vídeo como pendentes porque essas informações não estão disponíveis nos arquivos do repositório.
 
 ## Melhorias Futuras
 
@@ -412,9 +412,9 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/04_model_evaluatio
 - Investigar técnicas específicas para reduzir confusão entre cultivos e vegetação.
 - Usar validação cruzada estratificada para medir estabilidade.
 - Integrar o classificador a um pipeline real de recortes geoespaciais.
-- Adicionar interface ou API somente em etapa futura, se solicitado.
+- Publicar ou evoluir a interface web com uma API de inferência, se solicitado.
 - Registrar metadados de origem das imagens quando disponíveis.
 
 ## Vídeo de Demonstração
 
-Link: preencher com o link do YouTube antes da entrega.
+Link: a adicionar após a gravação.
