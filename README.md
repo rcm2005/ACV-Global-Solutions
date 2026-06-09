@@ -189,6 +189,8 @@ Resumo:
 
 Relatório completo: `reports/experiment_report.md`.
 
+Notebook de treinamento/reprodução: `notebooks/03_training_reproduction.ipynb`.
+
 Configuração usada:
 
 | Item | Valor |
@@ -291,7 +293,7 @@ Esses erros indicam que algumas imagens de áreas agrícolas podem ter textura, 
 
 ## Demonstração Funcional
 
-Notebook principal:
+Notebook principal de demonstração:
 
 ```text
 notebooks/04_model_evaluation_demo.ipynb
@@ -307,6 +309,8 @@ O notebook:
 - exibe classe prevista, confiança e top-3 probabilidades;
 - mostra exemplos de acertos e erros;
 - não retreina o modelo.
+
+Também existe uma interface web estática complementar em `frontend/index.html`, com identidade do produto, problema, arquitetura, resultados do modelo, ODS e equipe.
 
 ## Dataset: amostra versionada e download completo
 
@@ -344,6 +348,12 @@ python scripts/train_models.py --batch-size 256 --epochs-baseline 8 --epochs-imp
 
 Para permitir uso automático de `cuda` ou `mps`, remova `--force-cpu`.
 
+Ou abra o notebook de treinamento/reprodução:
+
+```bash
+jupyter notebook notebooks/03_training_reproduction.ipynb
+```
+
 Execute a demonstração:
 
 ```bash
@@ -362,7 +372,9 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/04_model_evaluatio
 .
 ├── EuroSAT_RGB/                         # dataset original, usado como fonte de imagens
 ├── data/processed/                      # manifestos, splits e estatísticas
+├── frontend/                            # interface web estática complementar
 ├── models/                              # checkpoints e métricas
+├── notebooks/03_training_reproduction.ipynb
 ├── notebooks/04_model_evaluation_demo.ipynb
 ├── reports/
 │   ├── EuroSAT_RGB_dataset_inspection.md
@@ -390,6 +402,9 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/04_model_evaluatio
 - `models/best_model.pt`
 - `models/class_names.json`
 - `models/metrics.json`
+- `notebooks/03_training_reproduction.ipynb`
+- `notebooks/04_model_evaluation_demo.ipynb`
+- `frontend/index.html`
 - `reports/figures/baseline_accuracy_loss.png`
 - `reports/figures/improved_accuracy_loss.png`
 - `reports/confusion_matrices/baseline_confusion_matrix.png`
